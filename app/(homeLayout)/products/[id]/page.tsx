@@ -14,7 +14,6 @@ export default async function Page({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  console.log(id);
 
   const item = allProducts.find((el) => el.id === Number(id))!;
   console.log({ item });
