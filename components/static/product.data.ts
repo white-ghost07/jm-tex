@@ -5,7 +5,7 @@ import p3 from "@/app/assets/products/category1/p3.jpg";
 import p4 from "@/app/assets/products/category1/p4.jpg";
 import p5 from "@/app/assets/products/category1/p5.jpg";
 import p6 from "@/app/assets/products/category1/p6.jpg";
-import { ProductType } from "@/types/item.type";
+import { ProductType } from "@/components/types/item.type";
 export const allProducts: ProductType[] = [
   {
     id: 1,

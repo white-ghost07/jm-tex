@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import { motion, LayoutGroup } from "motion/react";
 import ProductCard from "./productCard";
-import { ProductItem } from "@/types/item.type";
+import { ProductItem } from "@/components/types/item.type";
 
 export default function ProductsPage({
   products,

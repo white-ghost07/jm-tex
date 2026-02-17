@@ -26,13 +26,13 @@ export default function CertificationSlider({
     },
     breakpoints: {
       "(max-width: 768px)": {
-        slides: { origin: "auto", perView: "auto", spacing: 50 },
+        slides: { origin: "auto", perView: "auto", spacing: 30 },
       },
     },
   });
 
   return (
-    <section className="mx-auto max-w-350  px-4 sm:px-6 my-12 bg-white">
+    <section className="mx-auto max-w-7xl  px-4 sm:px-6 my-12 bg-white">
       <div className="  py-14">
         <h2 className="text-3xl font-semibold tracking-wide">{title}</h2>
 
@@ -55,13 +55,13 @@ export default function CertificationSlider({
           </div>
         </div>
 
-        <button
+        {/* <button
           type="button"
           onClick={onViewAll}
           className="mt-14 text-lg font-semibold hover:opacity-80"
         >
           View all
-        </button>
+        </button> */}
       </div>
     </section>
   );

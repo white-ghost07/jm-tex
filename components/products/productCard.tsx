@@ -3,7 +3,7 @@
 import Image from "next/image";
 import clsx from "clsx";
 import { motion } from "motion/react";
-import { ProductItem } from "@/types/item.type";
+import { ProductItem } from "@/components/types/item.type";
 
 export default function ProductCard({
   item,

@@ -116,6 +116,35 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+@keyframes scrollBounce {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scrollFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(12px);
+  }
+}
+
+.scroll-indicator {
+  animation: scrollFloat 3s ease-in-out infinite;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

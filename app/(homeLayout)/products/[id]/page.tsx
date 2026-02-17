@@ -5,7 +5,7 @@ import TopServicesPage from "@/components/products/TopService";
 import TrustedBy from "@/components/products/TrustedBy";
 import { certificate } from "@/components/static/certificate.data";
 import { allProducts } from "@/components/static/product.data";
-import { ProductItem } from "@/types/item.type";
+import { ProductItem } from "@/components/types/item.type";
 import Image from "next/image";
 
 export default async function Page({
@@ -14,38 +14,44 @@ export default async function Page({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
+  console.log(id);
 
   const item = allProducts.find((el) => el.id === Number(id))!;
-  console.log({ item });
   return (
-    <main className="w-full bg-white">
+    <main className="w-full my-20 bg-white">
       {/* ================= HERO ================= */}
-      <section className="w-full">
-        <div className="mx-auto grid max-w-350 grid-cols-12">
+      <section className="w-full px-4 ">
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-10 px-4 py-12  lg:flex-row lg:gap-8">
           {/* Left */}
-          <div className="col-span-12 flex min-h-[72vh] flex-col justify-center px-8 py-14 md:col-span-4 md:px-8">
-            <h1 className="text-[44px] font-extrabold tracking-wide text-black">
+          <div className="w-full flex-1 flex-col justify-center">
+            <h1 className="text-3xl font-semibold uppercase tracking-wide text-black sm:text-4xl">
               {item.hero.title}
             </h1>
 
-            <p className="mt-6 max-w-sm text-[18px] leading-8 text-gray-600">
+            <p className="mt-6 max-w-sm text-[16px] leading-7 text-gray-600 sm:text-[18px] sm:leading-8">
               {item.hero.description}
             </p>
 
-            <div className="mt-24 flex items-center gap-3 text-gray-600">
-              <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-gray-400">
+            <div className="mt-8 cursor-pointer flex flex-col gap-1 text-gray-600">
+              <span className="inline-flex h-12 w-8 items-center justify-center rounded-full border-2 border-gray-600 font-medium">
                 i
               </span>
-              <div className="flex flex-col leading-5">
-                <span className="text-[16px]">Scroll</span>
-                <span className="text-[22px] leading-5">↓</span>
+
+              <div className="scroll-indicator flex flex-col justify-center leading-none">
+                <div className="flex max-w-8 flex-col items-center">
+                  <span className="text-[16px] font-medium">Scroll</span>
+                  <span className="text-[22px]">↓</span>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Right Image */}
-          <div className="col-span-12 md:col-span-8">
-            <div className="relative h-[72vh] w-full md:h-[84vh]">
+          <div className="w-full flex-1">
+            <div
+              className="relative w-full
+        h-[320px] sm:h-[420px] md:h-[520px] lg:h-150"
+            >
               <Image
                 src={item.hero.image}
                 alt={item.hero.title}
@@ -59,25 +65,25 @@ export default async function Page({
       </section>
 
       {/* ================= DETAILS ================= */}
-      <section className="w-full  border-t border-gray-100">
-        <div className="mx-auto grid max-w-350 grid-cols-12 gap-8 px-8 py-16 md:px-14">
+      <section className="w-full border-t border-gray-100">
+        <div className="mx-auto flex max-w-7xl flex-col gap-10 px-4 py-12  lg:flex-row lg:gap-8">
           {/* Left Content */}
-          <div className="col-span-12 md:col-span-6">
-            <h2 className="text-[38px] font-extrabold tracking-wide text-black">
+          <div className="w-full flex-1">
+            <h2 className="text-[28px] font-semibold tracking-wide text-black sm:text-[38px]">
               {item.details.title}
             </h2>
 
-            <p className="mt-4 text-[14px] leading-6 text-gray-500">
+            <p className="mt-4 text-[14px] leading-6 text-gray-700">
               {item.details.intro}
             </p>
 
-            <div className="mt-10 space-y-7">
+            <div className="mt-6 space-y-4">
               {item.details.bullets.map((b) => (
                 <div key={b.heading}>
                   <h3 className="text-[16px] font-semibold text-black">
                     {b.heading}
                   </h3>
-                  <p className="mt-1 text-[14px] leading-6 text-gray-500">
+                  <p className="mt-1 text-[14px] leading-6 text-gray-700">
                     {b.text}
                   </p>
                 </div>
@@ -85,8 +91,8 @@ export default async function Page({
             </div>
 
             {/* Bottom Image */}
-            <div className="mt-10">
-              <div className="relative h-70 w-full md:h-85">
+            <div className="mt-6">
+              <div className="relative h-65 w-full sm:h-80 md:h-85">
                 <Image
                   src={item.hero.image}
                   // src={item.details.image2.src}
@@ -99,8 +105,8 @@ export default async function Page({
           </div>
 
           {/* Right Big Image */}
-          <div className="col-span-12 md:col-span-6">
-            <div className="relative h-130 w-full md:h-195">
+          <div className="w-full flex-1">
+            <div className="relative h-105 w-full sm:h-130 md:h-175 lg:h-200">
               <Image
                 src={item.hero.image}
                 // src={item.details.image1.src}

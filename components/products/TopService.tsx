@@ -27,7 +27,7 @@ export default function TopServicesPage() {
   return (
     <main className="w-full bg-white">
       {/* Top spacing like screenshot */}
-      <section className="mx-auto max-w-350 px-6 py-20 md:px-12 md:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-12 my-16 md:py-16">
         {/* Heading */}
         <div className="mx-auto max-w-5xl text-center">
           <h1 className="text-3xl font-semibold tracking-[0.12em] text-black md:text-[44px]">
@@ -51,13 +51,6 @@ export default function TopServicesPage() {
               isLast={idx === services.length - 1}
             />
           ))}
-        </div>
-
-        {/* Bottom text */}
-        <div className="mt-16 text-center">
-          <p className="text-[18px] font-semibold text-black">
-            Explore all services
-          </p>
         </div>
       </section>
     </main>

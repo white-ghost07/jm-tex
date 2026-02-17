@@ -1,7 +1,4 @@
-"use client";
-
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
 import img from "@/app/assets/contact-banner.jpg";
 
 export default function ContactHeroSection() {

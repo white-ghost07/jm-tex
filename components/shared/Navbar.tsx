@@ -6,15 +6,14 @@ import { usePathname } from "next/navigation";
 import { ChevronRight } from "lucide-react";
 import img from "@/app/assets/hover.jpg";
 import Image from "next/image";
+import { FaFacebook, FaLinkedin } from "react-icons/fa";
 type NavItem = { label: string; href: string; dropdown?: boolean };
 
 const navLinks: NavItem[] = [
+  { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Products", href: "/products", dropdown: true },
-  //   { label: "Purpose", href: "/purpose", dropdown: true },
-  //   { label: "Culture", href: "/culture" },
-  //   { label: "Stories", href: "/stories" },
-  //   { label: "Investors", href: "/investors", dropdown: true },
+
   { label: "Contact", href: "/contact" },
 ];
 
@@ -166,34 +165,9 @@ export default function Navbar() {
                         <div className="border-t border-slate-200 px-8 py-5 flex items-center justify-between">
                           {/* Social icons (simple circles like screenshot) */}
                           <div className="flex items-center gap-3">
-                            {[
-                              { label: "YouTube", href: "#" },
-
-                              { label: "LinkedIn", href: "#" },
-                            ].map((s) => (
-                              <a
-                                key={s.label}
-                                href={s.href}
-                                className="w-9 h-9 rounded-full bg-black text-white grid place-items-center text-[12px] font-bold hover:opacity-90"
-                                aria-label={s.label}
-                              >
-                                {s.label === "YouTube"
-                                  ? "▶"
-                                  : s.label === "Instagram"
-                                    ? "◎"
-                                    : s.label === "X"
-                                      ? "X"
-                                      : "in"}
-                              </a>
-                            ))}
+                            <FaFacebook size={30} />
+                            <FaLinkedin className="" size={30} />
                           </div>
-
-                          <Link
-                            href="/careers"
-                            className="text-sm font-semibold text-slate-900 hover:opacity-80"
-                          >
-                            Explore Careers
-                          </Link>
                         </div>
                       </div>
                     </div>

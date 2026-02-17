@@ -1,9 +1,10 @@
 import { Facebook, Linkedin } from "lucide-react";
 import Link from "next/link";
+import { FaFacebook, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-white">
+    <footer className="w-full bg-[#F9F9F9]">
       <div className="mx-auto max-w-7xl px-6 py-20">
         <div className="flex flex-col gap-14 md:flex-row md:items-start md:justify-between">
           {/* Left: Office info */}
@@ -58,12 +59,8 @@ export default function Footer() {
           {/* Right: Social + copyright */}
           <div className="md:text-right">
             <div className="flex items-center gap-3 md:justify-end">
-              <SocialIcon href="#" label="YouTube">
-                <Facebook className="text-[14px]" />
-              </SocialIcon>
-              <SocialIcon href="#" label="Instagram">
-                <Linkedin className="text-[14px]" />
-              </SocialIcon>
+              <FaFacebook size={30} />
+              <FaLinkedin size={30} />
             </div>
 
             <div className="mt-6 space-y-1 text-[16px] leading-[1.9] text-gray-700">
