@@ -9,11 +9,13 @@ import Image from "next/image";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
 type NavItem = { label: string; href: string; dropdown?: boolean };
 
-const navLinks: NavItem[] = [
+export const navLinks: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Products", href: "/products", dropdown: true },
 
+  { label: "Services", href: "/services" },
+  { label: "Process", href: "/process" },
   { label: "Contact", href: "/contact" },
 ];
 

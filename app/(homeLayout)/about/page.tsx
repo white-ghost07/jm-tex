@@ -2,6 +2,7 @@ import Image from "next/image";
 import img from "@/app/assets/about.png";
 import HowWeDoItSection from "@/components/about/HowWeDoIt";
 import GlobalFootprintImageMap from "@/components/about/GlobalFootprintImageMap";
+import CertificationsModern from "@/components/about/Certificate";
 export default function AdbotPage() {
   return (
     <section className="w-full mx-auto max-w-7xl my-20 bg-white">
@@ -75,6 +76,7 @@ export default function AdbotPage() {
           </div>
         </div>
       </section>
+      <CertificationsModern />
     </section>
   );
 }

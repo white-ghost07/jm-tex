@@ -18,10 +18,10 @@ type FormValues = {
 
 const inquiryOptions = [
   { value: "", label: "Select your inquiry type" },
-  { value: "yarns", label: "Yarns" },
-  { value: "apparel", label: "Apparel" },
-  { value: "activewear", label: "Activewear" },
-  { value: "hosiery", label: "Hosiery" },
+  { value: "Apparel And Fashion", label: "Apparel And Fashion" },
+  { value: "Fancy Yarns", label: "Fancy Yarns" },
+  // { value: "activewear", label: "Activewear" },
+  // { value: "hosiery", label: "Hosiery" },
 ];
 
 export default function ContactForm() {

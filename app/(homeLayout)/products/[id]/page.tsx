@@ -145,7 +145,9 @@ export default async function Page({
             />
           </div>
           <TopServicesPage />
-          <TrustedBy />
+          <div>
+            <TrustedBy />
+          </div>
           <CertificationsSlider items={certificate} />
           <GetInTouch />
         </div>
