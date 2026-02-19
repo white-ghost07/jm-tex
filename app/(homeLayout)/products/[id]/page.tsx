@@ -1,6 +1,7 @@
 import CertificationsSlider from "@/components/products/CertificationSlider";
 import GetInTouch from "@/components/products/GetInTouch";
 import ProductsPage from "@/components/products/Products";
+import ScrollButton from "@/components/products/ScrollButton";
 import TopServicesPage from "@/components/products/TopService";
 import TrustedBy from "@/components/products/TrustedBy";
 import { certificate } from "@/components/static/certificate.data";
@@ -32,25 +33,14 @@ export default async function Page({
               {item.hero.description}
             </p>
 
-            <div className="mt-8 cursor-pointer flex flex-col gap-1 text-gray-600">
-              <span className="inline-flex h-12 w-8 items-center justify-center rounded-full border-2 border-gray-600 font-medium">
-                i
-              </span>
-
-              <div className="scroll-indicator flex flex-col justify-center leading-none">
-                <div className="flex max-w-8 flex-col items-center">
-                  <span className="text-[16px] font-medium">Scroll</span>
-                  <span className="text-[22px]">↓</span>
-                </div>
-              </div>
-            </div>
+            <ScrollButton />
           </div>
 
           {/* Right Image */}
           <div className="w-full flex-1">
             <div
               className="relative w-full
-        h-[320px] sm:h-[420px] md:h-[520px] lg:h-150"
+        h-80 sm:h-105 md:h-130 lg:h-150"
             >
               <Image
                 src={item.hero.image}

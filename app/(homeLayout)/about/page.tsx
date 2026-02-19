@@ -4,8 +4,8 @@ import HowWeDoItSection from "@/components/about/HowWeDoIt";
 import GlobalFootprintImageMap from "@/components/about/GlobalFootprintImageMap";
 export default function AdbotPage() {
   return (
-    <section className="w-full my-20 bg-white">
-      <div className="mx-auto max-w-7xl px-4 py-10 md:py-16">
+    <section className="w-full mx-auto max-w-7xl my-20 bg-white">
+      <div className=" px-4 py-10 md:py-16">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-12">
           {/* LEFT: IMAGE */}
           <div className="w-full lg:flex-1">
@@ -61,6 +61,20 @@ export default function AdbotPage() {
 
       <HowWeDoItSection />
       <GlobalFootprintImageMap />
+
+      <section className="w-full  py-10">
+        <div className="w-full px-6">
+          <div className="relative w-full aspect-video overflow-hidden shadow-lg">
+            <Image
+              src={img} // replace with your image path
+              alt="Factory Manufacturing"
+              fill
+              priority
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </section>
     </section>
   );
 }

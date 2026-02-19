@@ -96,7 +96,7 @@ export default function HeroHeader() {
   }, [slider]);
 
   return (
-    <section className="w-full">
+    <section className="w-full relative">
       <div ref={sliderRef} className="keen-slider">
         {slides.map((slide) => (
           <div
@@ -128,6 +128,27 @@ export default function HeroHeader() {
             </div>
           </div>
         ))}
+      </div>
+
+      <div
+        onClick={() => {
+          window.scrollBy({
+            top: 800,
+            behavior: "smooth",
+          });
+        }}
+        className="mt-8 cursor-pointer absolute left-1/2 -translate-x-1/2 bottom-5 lg:bottom-12 flex flex-col gap-1 text-white"
+      >
+        <span className="inline-flex h-12 w-8 items-center justify-center rounded-full border-2 border-white font-medium">
+          i
+        </span>
+
+        <div className="scroll-indicator flex flex-col justify-center leading-none">
+          <div className="flex max-w-8 flex-col items-center">
+            <span className="text-[16px] font-medium">Scroll</span>
+            <span className="text-[22px]">↓</span>
+          </div>
+        </div>
       </div>
     </section>
   );
